@@ -1,0 +1,11 @@
+{% load socialaccount %}
+
+<h1>API Service</h1>
+{% if user.is_authenticated %}
+<p>Welcome back {{ user.username }}!</p>
+<a href="{% url 'account_logout' %}">Logout</a>
+{% else %}
+<h2>Please sign in</h2>
+<a>Using:</a><br>
+<li><a href="{% provider_login_url 'vk' %}">Vk</a><a> account</a><br></li>
+{% endif %}

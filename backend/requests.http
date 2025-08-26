@@ -1,0 +1,203 @@
+
+###
+POST http://127.0.0.1:8000/api/v1/user/register
+Content-Type: application/json
+
+{
+        "first_name": "Ilya",
+        "last_name": "Polkin",
+        "email": "ilyapatis24@mail.ru",
+        "password": "fjskdjfk",
+        "company": "Company1",
+        "position": "Position1"
+    }
+
+###
+POST http://127.0.0.1:8000/api/v1/user/register/confirm
+Content-Type: application/json
+
+{
+  "email":"ilyapatis24@mail.ru",
+  "token":"7e5c8ece3110427fc826e979de43f71e60e1bdb140b56"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/user/login
+Content-Type: application/json
+
+{
+  "email":"ipikov24@mail.ru",
+  "password":"fjskdjfk"
+}
+###
+
+GET http://127.0.0.1:8000/api/v1/user/details
+Content-Type: application/json
+Authorization: Token 5721f455ca09096825abd8b57d05028601bb9152
+
+
+
+###
+POST http://127.0.0.1:8000/api/v1/user/details
+Content-Type: application/json
+Authorization: Token ecc0dd089a585fd794f7bbf09d2c9c34247ceb67
+
+{
+        "first_name": "Igor",
+        "last_name": "Ivanov",
+        "email": "ipikov24@mail.ru",
+        "password": "fjskdjfk",
+        "company": "Company1",
+        "position": "Position2",
+        "type" : "buyer"
+    }
+
+
+###
+GET http://127.0.0.1:8000/api/v1/categories
+
+
+###
+GET http://127.0.0.1:8000/api/v1/shops
+
+
+###
+GET http://127.0.0.1:8000/api/v1/products
+
+
+###
+GET http://127.0.0.1:8000/api/v1/user/contact
+Authorization: Token ecc0dd089a585fd794f7bbf09d2c9c34247ceb67
+
+###
+POST http://127.0.0.1:8000/api/v1/user/contact
+Authorization: Token ecc0dd089a585fd794f7bbf09d2c9c34247ceb67
+Content-Type: application/json
+
+{               "country": "Russian Federation",
+                "region": "Vologodskaya area",
+                "city": "Cherepovets",
+                "street": "Mira",
+                "house": "23",
+                "structure": "3",
+                "building": "0",
+                "apartment": "21",
+                "phone": "85-58-87",
+                "postal_code": "16262"
+                }
+
+###
+PUT http://127.0.0.1:8000/api/v1/user/contact
+Authorization: Token ecc0dd089a585fd794f7bbf09d2c9c34247ceb67
+Content-Type: application/json
+
+{
+                "country": "Russian Federation",
+                "region": "Vologodskaya area",
+                "city": "Cherepovets",
+                "street": "Mira",
+                "house": "23",
+                "structure": "3",
+                "building": "0",
+                "apartment": "21",
+                "phone": "85-58-87",
+                "postal_code": "162625",
+                "id": "7"
+                }
+
+###
+DELETE http://127.0.0.1:8000/api/v1/user/contact
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type: application/json
+
+{
+  "items" : "2"
+}
+
+###
+GET http://127.0.0.1:8000/api/v1/basket
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/basket
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "items": 
+[
+  {"product_info": "33", 
+  "quantity": 1}
+]
+}
+###
+PUT http://127.0.0.1:8000/api/v1/basket
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "items": 
+  [
+    {"id": 33, 
+    "quantity": 2}
+  ]
+  }
+
+###
+DELETE http://127.0.0.1:8000/api/v1/basket
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "items": "11"
+  
+  }
+
+###
+GET http://127.0.0.1:8000/api/v1/partner/state
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/partner/state
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "state":"on"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/partner/update
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "url":
+  "https://euroser.ru/catalog"
+}
+
+
+
+###
+GET http://127.0.0.1:8000/api/v1/order
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+
+###
+POST http://127.0.0.1:8000/api/v1/order
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/json
+
+{
+  "id":"1",
+  "contact" : "5"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/v1/partner/orders
+Authorization: Token c4ccaf48f9716ccf4dc9687c473e0329fc535231
+Content-Type:application/jsonS
