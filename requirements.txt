@@ -68,3 +68,11 @@ virtualenv-clone==0.5.7
 wcwidth==0.2.5
 wrapt==1.14.0
 yarg==0.1.9
+Django>=5.2.5
+djangorestframework>=3.16.1
+django-rest-passwordreset>=1.5.0
+django-allauth>=1.8.0
+python-dotenv>=1.0.0
+django-debug-toolbar>=4.3.0
+sqlparse>=0.5.3
+asgiref>=3.9.1
