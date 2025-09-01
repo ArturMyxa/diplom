@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'orders.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': environ.get('POSTGRES_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': environ.get('POSTGRES_DB'),
         'USER': environ.get('POSTGRES_USER'),
         'PASSWORD': environ.get('POSTGRES_PASSWORD'),
